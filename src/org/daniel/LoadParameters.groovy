@@ -11,11 +11,11 @@ class LoadParameters implements Serializable {
   
   def load(param) {
     steps.bat "echo load parameters from jenkins: ${param}"
-    steps.properties([
+//     steps.properties([
       steps.parameters {
         ChoiceParameterDefinition("TestChoice", ["choice1", "choice2"], "this is test choice parameter")
       }
-    ])
+//     ])
   }
   
 }
