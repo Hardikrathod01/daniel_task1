@@ -1,5 +1,7 @@
 package org.daniel
 
+import hudson.model.ChoiceParameterDefinition
+
 class LoadParameters implements Serializable {
   def steps
   
