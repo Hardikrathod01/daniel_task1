@@ -13,7 +13,7 @@ class LoadParameters implements Serializable {
     steps.bat "echo load parameters from jenkins: ${param}"
     steps.properties([
       steps.parameters {
-        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        steps.string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
       }
     ])
   }
