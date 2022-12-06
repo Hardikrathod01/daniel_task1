@@ -7,7 +7,7 @@ class SlackNotification implements Serializable {
     this.steps = steps
   }
   
-  def slackNotification(message) {
+  def sendSlackNotification(message) {
     steps.bat "echo sending slack notification: ${message}"
   }
 }
