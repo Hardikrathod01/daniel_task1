@@ -12,25 +12,9 @@ class LoadParameters implements Serializable {
   def load(param) {
     steps.bat "echo load parameters from jenkins: ${param}"
     steps.properties([
-                        steps.parameters([
-                            [
-                                $class: 'ChoiceParameter',
-                                choiceType: 'PT_CHECKBOX',
-                                name: 'services',
-                                script: [
-                                    $class: 'GroovyScript',
-                                    script: [
-                                        sandbox: true,
-                                        script: '''return [
-                                            "admin-service",
-                                            "user-service",
-                                            "product-service",
-                                        ]'''.stripIndent()
-                                    ]
-                                ]
-                            ],
-                        ])
-                    ])
+      steps.parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+      }
   }
   
 }
