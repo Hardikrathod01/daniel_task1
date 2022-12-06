@@ -10,7 +10,7 @@ class ApprovalInput implements Serializable {
   }
   
   def takeInput() {
-    steps.input message: 'Please decide whether pipeline should move forward or not', ok: 'Continue Build?'
+    steps.input message: 'Please decide whether pipeline should move forward or not', ok: 'Continue Build'
   }
   
 }
