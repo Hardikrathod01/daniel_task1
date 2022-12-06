@@ -1,6 +1,6 @@
 package org.daniel
 
-Class GitSCMCheckout implements Serializable {
+class GitSCMCheckout implements Serializable {
   def steps
   
   GitSCMCheckout(steps) {
